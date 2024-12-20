@@ -44,7 +44,7 @@ pip install langchain_experimental
 2. Setup OpenAI API Key:
 To use OpenAI’s GPT-4 API, you need to provide an API key. You can obtain this API key by signing up for OpenAI services. Once you have the API key, you can set it up in the code using the following snippet:
 
-	```bash
+	```python
 	import getpass
 
 	# Enter your OpenAI API Key (It will save it in the environment variable)
@@ -55,7 +55,7 @@ To use OpenAI’s GPT-4 API, you need to provide an API key. You can obtain this
 3. Initialize the LLM (Language Model):
 This section initializes the GPT-4 model using the provided OpenAI API key.
 
-	```bash
+	```python
 	from langchain_openai import ChatOpenAI
 
 	# Initialize GPT-4 model
@@ -70,7 +70,7 @@ This section initializes the GPT-4 model using the provided OpenAI API key.
 4. Create the Pandas DataFrame Agent:
 The agent is created by passing the loaded DataFrame (df) to the create_pandas_dataframe_agent function. This allows the agent to process and respond to queries based on the data stored in the DataFrame. The agent can answer questions about movies in the dataset, such as filtering by genre, rating, or release year.
 
-	```bash
+	```python
 	from langchain_experimental.agents import create_pandas_dataframe_agent
 
 	# Create the agent
@@ -80,7 +80,7 @@ The agent is created by passing the loaded DataFrame (df) to the create_pandas_d
 5. Run the Agent with a Query:
 You can now run the agent with a query to get movie recommendations or information. The agent will process the query and provide a response based on the data in the DataFrame.
 
-	```bash
+	```python
 	example_query = "Please give me a good drama movie released recently."
 	response = agent.run(example_query)
 	print(response)
