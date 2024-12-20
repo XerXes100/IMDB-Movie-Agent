@@ -49,7 +49,7 @@ To use OpenAI’s GPT-4 API, you need to provide an API key. You can obtain this
 
 	# Enter your OpenAI API Key (It will save it in the environment variable)
 	if not os.environ.get("OPENAI_API_KEY"):
-		os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API key: ")
+	    os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API key: ")
 	```
 
 3. Initialize the LLM (Language Model):
