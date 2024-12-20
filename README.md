@@ -31,7 +31,7 @@ pip install langchain_experimental
 
 1. Obtain the IMDb Dataset using kagglehub:
 
-	```bash
+	```python
 	import kagglehub
 	import os
 
