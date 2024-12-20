@@ -41,7 +41,7 @@ pip install langchain_experimental
 	df = pd.read_csv(file_path)
 	```
 
-2. Setup OpenAI API Key
+2. Setup OpenAI API Key:
 To use OpenAI’s GPT-4 API, you need to provide an API key. You can obtain this API key by signing up for OpenAI services. Once you have the API key, you can set it up in the code using the following snippet:
 
 	```bash
@@ -52,7 +52,7 @@ To use OpenAI’s GPT-4 API, you need to provide an API key. You can obtain this
 		os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API key: ")
 	```
 
-3. Initialize the LLM (Language Model)
+3. Initialize the LLM (Language Model):
 This section initializes the GPT-4 model using the provided OpenAI API key.
 
 	```bash
@@ -67,7 +67,7 @@ This section initializes the GPT-4 model using the provided OpenAI API key.
 	)
 	```
 
-4. Create the Pandas DataFrame Agent
+4. Create the Pandas DataFrame Agent:
 The agent is created by passing the loaded DataFrame (df) to the create_pandas_dataframe_agent function. This allows the agent to process and respond to queries based on the data stored in the DataFrame. The agent can answer questions about movies in the dataset, such as filtering by genre, rating, or release year.
 
 	```bash
@@ -77,7 +77,7 @@ The agent is created by passing the loaded DataFrame (df) to the create_pandas_d
 	agent = create_pandas_dataframe_agent(llm, df, allow_dangerous_code=True)
 	```
 
-5. Run the Agent with a Query
+5. Run the Agent with a Query:
 You can now run the agent with a query to get movie recommendations or information. The agent will process the query and provide a response based on the data in the DataFrame.
 
 	```bash
@@ -86,7 +86,7 @@ You can now run the agent with a query to get movie recommendations or informati
 	print(response)
 	```
 
-6. Viewing Results
+6. Viewing Results:
 Once the query is run, the agent will return a response based on the available movie data. You can change the query to suit different types of movie-related inquiries, such as filtering by genre, release year, rating, and more.
 
 ### create_pandas_dataframe_agent
